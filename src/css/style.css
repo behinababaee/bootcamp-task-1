@@ -1,0 +1,162 @@
+/* Reset */
+*,
+* ::before,
+* ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* list-style: none; */
+}
+
+/* Root */
+:root {
+  --color-button: #219f95;
+  --color-badge: #afcedd;
+  --color-button-text: #ffffff;
+  --color-heading: #1e1e1e;
+  --color-text: #234894;
+  --color-text-light: #696969;
+}
+html {
+  font-size: 62.5%;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-heading);
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+h2 {
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+@media screen and(min-width:1024px) {
+  h1 {
+    font-size: 3rem;
+    font-weight: 900;
+  }
+  h3 {
+    font-size: 1.8rem;
+    font-weight: 900;
+  }
+}
+
+.container {
+  max-width: 1140px;
+  margin: 5rem auto;
+}
+
+/* Bottun */
+
+.btn {
+  cursor: pointer;
+  text-align: center;
+  outline: 0;
+  border: 0;
+  border-radius: 8px;
+  background-color: var(--color-button);
+  color: var(--color-button-text);
+  font-size: 1.5rem;
+  padding: 1.8rem 1.5rem;
+  margin-bottom: 1.8rem;
+  transition: all 0.2s ease-out;
+}
+.btn:hover{
+  box-shadow: 0 0 15px 10px #efefef;
+}
+
+/* Badge */
+
+.badge {
+  text-align: center;
+  outline: 0;
+  border: 0;
+  border-radius: 8px;
+  background-color: var(--color-badge);
+  color: var(--color-text);
+  font-size: 1.4rem;
+  font-weight: 900;
+  padding: 0.8rem 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .badge {
+    font-size: 1.8rem;
+  }
+}
+
+/* Card */
+
+.intro-requests {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+.cards {
+  display: grid;
+  gap: 3rem 4rem;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 320px));
+}
+.request {
+  width: 32rem;
+  height: auto;
+  overflow: hidden;
+}
+.request__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.upload {
+  color: var(--color-text);
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.request__upload {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.request__detail {
+  margin-top: 1.6rem;
+}
+.request__detail p,
+.request__date {
+  font-size: 1.2rem;
+  color: var(--color-text-light);
+}
+.request__user-detail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.3rem;
+}
+.user-detail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.request__user-detail img {
+  border-radius: 8px;
+  margin-left: 1rem;
+}
+@media screen and (min-width: 1024px) {
+  .intro-requests {
+    margin-right: 6rem;
+    text-align: right;
+  }
+}
